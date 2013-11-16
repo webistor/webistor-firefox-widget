@@ -1,0 +1,17 @@
+{
+    "license": "MIT",
+    "description": "Save the web.",
+    "contributors": [],
+    "author": "2278766732",
+    "url": "http://bartroorda.nl",
+    "dependencies": [
+        "api-utils",
+        "addon-kit"
+    ],
+    "version": "initial.rev14",
+    "lib": "lib",
+    "fullName": "webistor",
+    "main": "main",
+    "id": "jid0-Z70J4fh6xsWmurjHOHoJAq5rdIc",
+    "name": "webistor"
+}
