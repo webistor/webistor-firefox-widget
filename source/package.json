@@ -1,17 +1,10 @@
 {
-    "license": "MIT",
-    "description": "Save the web.",
-    "contributors": [],
-    "author": "2278766732",
-    "url": "http://bartroorda.nl",
-    "dependencies": [
-        "api-utils",
-        "addon-kit"
-    ],
-    "version": "initial.rev14",
-    "lib": "lib",
-    "fullName": "webistor",
-    "main": "main",
-    "id": "jid0-Z70J4fh6xsWmurjHOHoJAq5rdIc",
-    "name": "webistor"
+  "name": "webistor",
+  "title": "Webistor",
+  "id": "jid1-Rzc1BHiXjXIRxQ",
+  "description": "the art of tagging",
+  "author": "Webistor",
+  "url": "http://webistor.net",
+  "license": "MPL 2.0",
+  "version": "0.1"
 }
