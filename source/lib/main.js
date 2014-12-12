@@ -16,14 +16,14 @@ exports.main = function() {
         id: "webistor-basis-widget",
         label: "Save this page to Webistor",
 
-        contentURL: "http://www.webistor.net/favicon.ico",
+        contentURL: "http://new.webistor.net/favicon.ico",
 
         // Add a function to trigger when the Widget is clicked.
         onClick: function(event) {
 
             // Open a new tab in the currently active window.
             tabs.open({
-              url: "http://www.webistor.net/add?title="+encodeURIComponent(tabs.activeTab.title)+"&url="+encodeURIComponent(tabs.activeTab.url),
+              url: "http://new.webistor.net/add?title="+encodeURIComponent(tabs.activeTab.title)+"&url="+encodeURIComponent(tabs.activeTab.url),
               inNewWindow: false
             });
 
