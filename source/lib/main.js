@@ -6,8 +6,8 @@
  */
 
 // We want a widget that opens a new tab, so: include widget` and `tabs` modules.
-var Widget = require("widget").Widget;
-var tabs = require('tabs');
+var Widget = require("sdk/widget").Widget;
+var tabs = require('sdk/tabs');
 
 exports.main = function() {
 
@@ -16,14 +16,14 @@ exports.main = function() {
         id: "webistor-basis-widget",
         label: "Save this page to Webistor",
 
-        contentURL: "http://new.webistor.net/favicon.ico",
+        contentURL: "https://webistor.net/favicon.ico",
 
         // Add a function to trigger when the Widget is clicked.
         onClick: function(event) {
 
             // Open a new tab in the currently active window.
             tabs.open({
-              url: "http://new.webistor.net/add?title="+encodeURIComponent(tabs.activeTab.title)+"&url="+encodeURIComponent(tabs.activeTab.url),
+              url: "https://webistor.net/add?title="+encodeURIComponent(tabs.activeTab.title)+"&url="+encodeURIComponent(tabs.activeTab.url),
               inNewWindow: false
             });
 
