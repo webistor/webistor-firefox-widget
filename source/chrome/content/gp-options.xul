@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE options SYSTEM "chrome://webistor_panel/locale/options.dtd">
+
+<vbox xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+  <setting  type="integer" 
+            pref="extensions.webistor_panel.panelWidth" 
+            title="&gp.panelSize.widthTitle;" 
+            desc="&gp.panelSize.widthDesc;"
+            min="5" 
+            max="100"
+            increment="5"
+            />
+
+  <setting  type="integer" 
+            pref="extensions.webistor_panel.panelHeight" 
+            title="&gp.panelSize.heightTitle;" 
+            desc="&gp.panelSize.heightDesc;"
+            min="5" 
+            max="100"
+            increment="5"
+            />
+            
+  <setting  type="integer" 
+            pref="extensions.webistor_panel.delayFirstRun" 
+            title="&gp.delayFirstRun.title;"
+            desc="&gp.delayFirstRun.desc;"
+            min="0"
+            max="60"
+            />
+            
+  <setting  type="menulist"
+            pref="extensions.webistor_panel.modfiers"
+            title="&gp.shortcut.modifiers.title;"
+            desc="&gp.shortcut.modifiers.desc;"
+            >
+    <menulist>
+      <menupopup>
+        <menuitem value="accel" label="Ctrl" />
+        <menuitem value="shift" label="Shift" />
+        <menuitem value="alt" label="Alt" />
+        <menuitem value="accel shift" label="Ctrl+Shift" />
+        <menuitem value="accel alt" label="Ctrl+Alt" />
+        <menuitem value="shift alt" label="Shift+Alt" />
+        <menuitem value="os" label="Super (not recommended, because it can conflict with system wide shortcuts)" />
+      </menupopup>
+    </menulist>
+  </setting>
+  
+  <setting  type="string"
+            pref="extensions.webistor_panel.key"
+            title="&gp.shortcut.key.title;"
+            desc="&gp.shortcut.key.desc;"
+            />
+
+  <setting  type="control" title="&gp.shortcut.button.title;">
+    <button id="gp-restart"
+            label="&gp.shortcut.button.label;" 
+            oncommand='var boot = Components.classes["@mozilla.org/toolkit/app-startup;1"].getService(Components.interfaces.nsIAppStartup);
+                       boot.quit(Components.interfaces.nsIAppStartup.eForceQuit|Components.interfaces.nsIAppStartup.eRestart);'
+            />
+  </setting>
+
+</vbox>

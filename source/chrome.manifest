@@ -1,0 +1,5 @@
+content   webistor_panel                 chrome/content/
+
+locale    webistor_panel   en-US         chrome/locale/en-US/
+
+overlay	chrome://browser/content/browser.xul	chrome://webistor_panel/content/gp-overlay.xul

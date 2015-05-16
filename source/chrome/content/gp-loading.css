@@ -1,0 +1,13 @@
+#webistor_label{
+  font-size: 160%;
+  font-weight: bold;
+}
+
+#loading_label{
+  font-size: 130%;
+  padding-bottom: 1em;
+}
+
+#loading_vbox{
+  margin: 10em;
+}

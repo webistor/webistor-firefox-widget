@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="chrome://webistor_panel/content/gp-overlay.css" type="text/css"?>
+
+<!DOCTYPE overlay SYSTEM "chrome://webistor_panel/locale/overlay.dtd">
+
+<overlay  id="webistor_panel-overlay"
+          xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+	<script src="gp-overlay.js"/>
+	
+  <keyset id="mainKeyset">
+    <key id="webistor_panel-shortcut_cmd" modifiers="" key="" oncommand="webistor_panel.BrowserOverlay.gpShortcut_cmd();"/>
+   </keyset>
+   
+  <stringbundleset id="stringbundleset">
+		<stringbundle id="webistor_panel-string-bundle" src="chrome://webistor_panel/locale/overlay.properties"/>
+	</stringbundleset>
+	
+  <toolbarpalette id="BrowserToolbarPalette">
+		<toolbarbutton
+			id="webistor_panel-toolbar-button"
+			class="toolbarbutton-1 chromeclass-toolbar-additional"
+			label="&webistor_panelToolbarButton.label;"
+			image="chrome://webistor_panel/content/favicon.png"
+			tooltiptext="&webistor_panelToolbarButton.tooltip;"
+      onclick="webistor_panel.BrowserOverlay.onclick(event);"
+			popup="webistor_panel-panel"
+      context="webistor_panel-context"
+			>		
+		</toolbarbutton>		
+	</toolbarpalette>
+  
+	<popupset>
+    <panel 
+				id="webistor_panel-panel" 
+				backdrag="true"
+				type="arrow"
+				onpopupshowing="webistor_panel.BrowserOverlay.openWebistorPanel();"
+        onpopuphiding="webistor_panel.BrowserOverlay.closeWebistorPanel();"
+        noautohide="false"
+        onpopupshown="document.getElementById('webistor_panel-iframe').focus();"
+				>
+        <vbox flex="1">
+          <hbox id="webistor_panel-panel-toolbar" class="">
+            <toolbarbutton id="webistor_panel-toolbarButton_back"
+              class="webistor_panel-toolbarbutton-class"
+              oncommand="webistor_panel.BrowserOverlay.goBack();"
+              tooltiptext="&webistor_panelToolbar.goBack;"/>
+            <toolbarbutton id="webistor_panel-toolbarButton_forward"
+              class="webistor_panel-toolbarbutton-class"
+              oncommand="webistor_panel.BrowserOverlay.goForward();"
+              tooltiptext="&webistor_panelToolbar.goForward;"/>
+            <toolbarbutton id="webistor_panel-toolbarButton_reload"
+              class="webistor_panel-toolbarbutton-class"
+              oncommand="webistor_panel.BrowserOverlay.setWebistorIframe('https://webistor.net');"
+              tooltiptext="&webistor_panelToolbar.reload;"/>
+            <toolbarspacer flex="2" />
+            <toolbarbutton id="webistor_panel-toolbarButton_autoHide"
+              class="webistor_panel-toolbarbutton-class"
+              oncommand="webistor_panel.BrowserOverlay.changeAutoHideMode();"
+              type="checkbox"
+              tooltiptext="&webistor_panelToolbar.autohide;"/>
+            <toolbarbutton id="webistor_panel-toolbarButton_pin"
+              class="webistor_panel-toolbarbutton-class"
+              oncommand="webistor_panel.BrowserOverlay.changePinMode();"
+              type="checkbox"
+              tooltiptext="&webistor_panelToolbar.pin;"/>
+            <toolbarbutton id= "webistor_panel-toolbarButton_close"
+              class="webistor_panel-toolbarbutton-class"
+              oncommand="this.parentNode.parentNode.parentNode.hidePopup();"
+              tooltiptext="&webistor_panelToolbar.close;"/>
+          </hbox>
+          <hbox id="webistor_panel-panel-iframe" flex="1">
+            <browser 
+              id="webistor_panel-iframe" 
+              type="content" 
+              src="chrome://webistor_panel/content/gp-loading.xul" 
+              flex="2"
+              container="true"
+              />
+            </hbox>
+        </vbox>
+			</panel>
+	</popupset>
+  
+  <popupset>
+    <menupopup id="webistor_panel-context">
+
+      <command id="webistor_panel-reload_command" oncommand="webistor_panel.BrowserOverlay.setWebistorIframe('https://webistor.net');"/>
+      <command id="webistor_panel-compose_command"  oncommand="webistor_panel.BrowserOverlay.add();"/>
+      
+      <menuitem label="&webistor_panelToolbarButton.compose_context;" command="webistor_panel-compose_command" class="menuitem-iconic" image="chrome://webistor_panel/content/favicon.png"/>
+      <menuitem label="&webistor_panelToolbarButton.reload_context;" command="webistor_panel-reload_command" class="menuitem-iconic" image="chrome://webistor_panel/content/reload.png"/>
+
+    </menupopup>
+	</popupset>
+  
+</overlay>

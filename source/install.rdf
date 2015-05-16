@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RDF xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:em="http://www.mozilla.org/2004/em-rdf#">
+    <Description about="urn:mozilla:install-manifest">
+        <em:type>2</em:type> <!-- 2 : Extension -->
+        <em:id>jid1-Rzc1BHiXjXIRxQ@jetpack</em:id>
+        <em:version>0.3</em:version>
+        <em:name>webistor</em:name>
+        <em:creator>bartwr</em:creator>
+        
+        <em:targetApplication>
+            <Description>
+                <!-- Firefox -->
+                <em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id>
+                <em:minVersion>26.0</em:minVersion>
+                <em:maxVersion>33.*</em:maxVersion>
+            </Description>
+        </em:targetApplication>
+        
+        <em:optionsURL>chrome://webistor_panel/content/gp-options.xul</em:optionsURL>
+        <em:optionsType>2</em:optionsType>
+        
+        <em:iconURL>chrome://webistor_panel/content/webistor-48.png</em:iconURL>
+        <em:icon64URL>chrome://webistor_panel/content/webistor-64.png</em:icon64URL>
+        
+        <em:localized>
+          <Description>
+            <em:locale>en-US</em:locale>
+            <em:name>Webistor</em:name>
+            <em:description>the art of tagging</em:description>
+          </Description>
+        </em:localized>
+
+    </Description>
+</RDF>

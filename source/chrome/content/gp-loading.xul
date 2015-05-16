@@ -1,0 +1,18 @@
+<?xml version="1.0"?>  
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+<!-- Extremely recommended to keep this css include!! -->  
+<?xml-stylesheet href="chrome://webistor_panel/content/gp-loading.css" type="text/css"?>
+
+<!DOCTYPE overlay SYSTEM "chrome://webistor_panel/locale/loading.dtd">
+
+<window id="webistorLoaging_window"  
+        xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">  
+
+  <vbox id="loading_vbox" align="center">
+    <label id="webistor_label" value="&loading.webistor_label;" />
+    <image id="webistor_loading_img" src="chrome://webistor_panel/content/webistor-128.png" />
+    <label  id="loading_label" value="&loading.loading_label;" />
+    <progressmeter id="webistorLoadingProgress" mode="undetermined" />
+  </vbox>
+
+</window>

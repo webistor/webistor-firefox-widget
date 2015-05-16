@@ -1,0 +1,11 @@
+<!ENTITY webistor_panelToolbarButton.label           "Webistor">
+<!ENTITY webistor_panelToolbarButton.tooltip         "Webistor">
+<!ENTITY webistor_panelToolbarButton.reload_context  "Reload panel">
+<!ENTITY webistor_panelToolbarButton.check_context   "Check Webistor">
+<!ENTITY webistor_panelToolbarButton.compose_context "Add/Show current site">
+<!ENTITY webistor_panelToolbar.reload                "Reload panel">
+<!ENTITY webistor_panelToolbar.autohide              "Show/Hide the toolbar">
+<!ENTITY webistor_panelToolbar.pin                   "Pin/Unpin the panel">
+<!ENTITY webistor_panelToolbar.close                 "Close the panel">
+<!ENTITY webistor_panelToolbar.goBack                "Go back">
+<!ENTITY webistor_panelToolbar.goForward             "Go forward">

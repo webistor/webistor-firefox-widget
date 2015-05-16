@@ -1,0 +1,13 @@
+<!ENTITY gp.panelSize.widthTitle      "Panel width:">
+<!ENTITY gp.panelSize.widthDesc       "Percentage of the window's available width.">
+<!ENTITY gp.panelSize.heightTitle     "Panel height:">
+<!ENTITY gp.panelSize.heightDesc      "Percentage of the window's available height.">
+<!ENTITY gp.delayFirstRun.title       "Delay first Webistor load for:">
+<!ENTITY gp.delayFirstRun.desc        "Delay in seconds. This makes Firefox start faster.">
+
+<!ENTITY gp.shortcut.modifiers.title  "Modifiers">
+<!ENTITY gp.shortcut.modifiers.desc   "In Mac Ctrl = Cmd">
+<!ENTITY gp.shortcut.key.title        "Key">
+<!ENTITY gp.shortcut.key.desc         "Enter only one character. If you enter more than one, only the first is used.">
+<!ENTITY gp.shortcut.button.title     "To takes effect the shortcut's change, you must restart Firefox">
+<!ENTITY gp.shortcut.button.label     "Restart now!">
